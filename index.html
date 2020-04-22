@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Api-musica</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container-img">
+        <img src="img/logo.png" alt="logo">
+      </div>
+
+      <div class="filtro-album">
+        <label>Filtro album per genere</label>
+        <select>
+          <option value=""></option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="metal">Metal</option>
+          <option value="jazz">Jazz</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="cds-container container">
+
+    </div>
+
+    <!-- template handlebars js -->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="cd" data-genre="{{genre}}">
+        <img src="{{poster}}" alt="">
+        <h3>{{title}}</h3>
+        <span class="author">{{author}}</span>
+        <span class="year">{{year}}</span>
+      </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script src="main.js"> </script>
+  </body>
+</html>
